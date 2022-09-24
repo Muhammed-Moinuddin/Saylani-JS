@@ -104,6 +104,36 @@ var someParams = ["hello", true, 3.5];
 var otherParams = [1, 2, ...someParams];
 console.log(otherParams);
 
+//Before
+const d = 5;
+console.log("This is my number " + d)
+//String Interpolation
+console.log(`This is my number ${d}`);
+//Turnary operator
+console.log(`This is answer ${d === 5 ? true : false}`);
+//New way of Object Key
+let g = 0, h = 0;
+const anyObj = {g, h};
+console.log(anyObj);
+//Dynamic Key
+let newObj = {
+    foo: "bar",
+    ["baz" + addSomething()] : 42,
+    square(num){
+        return num ** 2;
+    }
+}
+//In Ecmascript6
+var objKey = "foo";
+console.log(newObj[objKey]);
+
+//Destructuring Assignment
+var anyList = [1, 2, 3];
+var [k, ,l] = anyList;
+console.log(k,l);
+
+
+
 
 
 
